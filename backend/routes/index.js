@@ -6,7 +6,7 @@ var mysql = require('mysql2');
 let conexion = bd
 
 /* GET home page. */
-router.post('/', function (req, res, next) {
+ router.post('/', function (req, res, next) {
     console.log(req.body)
     var post = req.body;
     var query = conexion.query('INSERT INTO personas SET ?', post, function (error, results, fields) {
